@@ -25,6 +25,7 @@ jobs:
 
   lint:
     name: Lint
+    needs: format
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -44,7 +45,7 @@ jobs:
   # todo: add here after adding tests
   # test:
   #   name: Test
-  #   needs: format
+  #   needs: lint
   #   runs-on: ubuntu-latest
   #   steps:
   #     - name: Checkout
@@ -64,6 +65,7 @@ jobs:
   build:
     name: Build
     # needs: test
+    needs: lint
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
