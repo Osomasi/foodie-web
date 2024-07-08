@@ -1,3 +1,10 @@
+import FoodieLogo from "./ui/foodie-logo";
+
+
 export default function Home() {
-  return <main className="bg-red-400">I SEE THIS</main>;
+  return(
+<div className="">
+  <FoodieLogo />
+</div>
+  ) 
 }
